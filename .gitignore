@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# Visual studio workspace variables
+# Visual Studio workspace
 .vscode/*
 .vs/*
