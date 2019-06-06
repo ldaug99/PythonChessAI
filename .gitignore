@@ -102,6 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.vscode/arduino.json
-.vscode/c_cpp_properties.json
-.vs/VSWorkspaceState.json
+
+# Visual Studio workspace
+.vscode/*
+.vs/*
