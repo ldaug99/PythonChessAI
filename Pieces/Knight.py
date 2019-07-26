@@ -1,10 +1,11 @@
-class Knight:
+class Knight(Piece):
     __type = "Knight"
     __color = ""
     __movePattern = [(2,1)]
     __character = {"white": "♘", "black": "♞"}
+    __image = {"white": "white_king.png", "black": "black_king.png"}
     
-    def __init__(self, color):
+    def __init__(self, color): 
         self.__color = color
 
     def getColor(self): return self.__color
@@ -13,6 +14,7 @@ class Knight:
         
     def getCharacter(self): return self.__character
 
+    def getImage(self): return self.__image
     def getMoves(self, position):
         moves = []
         for i in range(0,len(self.__movePattern)):

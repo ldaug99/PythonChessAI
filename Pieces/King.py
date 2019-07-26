@@ -1,17 +1,20 @@
 class King:
-    __name = "King"
+    __type = "King"
     __color = ""
     __movePattern = [(1,0),(0,1)]
-    __character = {"white": "♔", "black": "♚"}
-    
+    __character = {"white": "u2654", "black": "u265a"} # Unicode for ♔ and ♚
+    __image = {"white": "white_king.png", "black": "black_king.png"}
+
     def __init__(self, color):
         self.__color = color
 
     def getColor(self): return self.__color
 
-    def getName(self): return self.__name
+    def getType(self): return self.__type
                 
     def getCharacter(self): return self.__character
+
+    def getImage(self): return self.__image
 
     def getMoves(self, position):
         moves = []
