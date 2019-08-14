@@ -1,18 +1,13 @@
-class Bishop:
+from Pieces.Piece import Piece
+
+class Bishop(Piece):
     __type = "Bishop"
-    __color = ""
+    __move = []
     __character = {"white": "♗", "black": "♝"}
-    __image = {"white": "white_king.png", "black": "black_king.png"}
+    __image = {"white": "white_bishop.png", "black": "black_bishop.png"}
+    
+    def __init__(self, color): 
+        super().__init__(self.__type, color, self.__move, self.__character, self.__image)
 
-    def __init__(self, color):
-        self.__color = color
-
-    def getColor(self): return self.__color
-
-    def getType(self): return self.__type
-
-    def getName(self): return self.__name
-        
-    def getCharacter(self): return self.__character
-
-    def getImage(self): return self.__image
+    def getMoves(self, position):
+        pass

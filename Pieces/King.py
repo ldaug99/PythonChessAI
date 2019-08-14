@@ -1,31 +1,13 @@
-class King:
+from Pieces.Piece import Piece
+
+class King(Piece):
     __type = "King"
-    __color = ""
-    __movePattern = [(1,0),(0,1)]
+    __move = [(1,0),(0,1)]
     __character = {"white": "u2654", "black": "u265a"} # Unicode for ♔ and ♚
     __image = {"white": "white_king.png", "black": "black_king.png"}
 
-    def __init__(self, color):
-        self.__color = color
-
-    def getColor(self): return self.__color
-
-    def getType(self): return self.__type
-                
-    def getCharacter(self): return self.__character
-
-    def getImage(self): return self.__image
+    def __init__(self, color): 
+        super().__init__(self.__type, color, self.__move, self.__character, self.__image)
 
     def getMoves(self, position):
-        moves = []
-        for i in range(0,len(self.__movePattern)):
-            pattern = self.__movePattern[i]
-            for k in range(-1,2,2):
-                for h in range(-1,2,2):
-                    _rank = position[0]+(pattern[0]*k)
-                    _file = position[1]+(pattern[1]*h)
-                    if _rank < 0 or _rank > 7 or _file < 0 or _file > 7:
-                        continue
-                    move = (_rank,_file)
-                    moves.append(move)
-        return moves
+        pass

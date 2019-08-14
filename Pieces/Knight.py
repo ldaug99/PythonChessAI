@@ -1,24 +1,18 @@
+from Pieces.Piece import Piece
+
 class Knight(Piece):
     __type = "Knight"
-    __color = ""
-    __movePattern = [(2,1)]
+    __move = [(2,1)]
     __character = {"white": "♘", "black": "♞"}
-    __image = {"white": "white_king.png", "black": "black_king.png"}
+    __image = {"white": "white_knight.png", "black": "black_knight.png"}
     
     def __init__(self, color): 
-        self.__color = color
+        super().__init__(self.__type, color, self.__move, self.__character, self.__image)
 
-    def getColor(self): return self.__color
-
-    def getType(self): return self.__type
-        
-    def getCharacter(self): return self.__character
-
-    def getImage(self): return self.__image
     def getMoves(self, position):
         moves = []
-        for i in range(0,len(self.__movePattern)):
-            pattern = self.__movePattern[i]
+        for i in range(0,len(self.__move)):
+            pattern = self.__move[i]
             for k in range(-1,2,2):
                 for h in range(-1,2,2):
                     _rank = position[0]+(pattern[0]*k)
