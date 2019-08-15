@@ -2,7 +2,7 @@ from Pieces.Piece import Piece
 
 class Knight(Piece):
     __type = "Knight"
-    __move = [(2,1)]
+    __move = [(2,1),(1,2)]
     __character = {"white": "♘", "black": "♞"}
     __image = {"white": "white_knight.png", "black": "black_knight.png"}
     
